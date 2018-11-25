@@ -7,6 +7,9 @@ if exists("b:current_syntax")
     finish
 endif
 
+" Required for case-insensitive keywords
+syn case ignore
+
 syn keyword xplnKeyword if else endi while endw return input output fun endf
 syn keyword xplnOperator and or
 
@@ -17,6 +20,3 @@ hi def link xplnOperator Operator
 hi def link xplnNumber Number
 
 let b:current_syntax = "XPLN"
-
-
-
